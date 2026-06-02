@@ -87,6 +87,8 @@ a:hover{text-decoration:underline}
 .note{
   margin-top:18px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;color:var(--muted)
 }
+.service-info p{margin:6px 0}
+.service-info strong{color:var(--text)}
 
 .quotes blockquote{
   margin:0 0 14px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px
