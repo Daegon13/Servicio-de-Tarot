@@ -24,4 +24,20 @@
     <loc>https://www.marivivian.com/contacto.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.marivivian.com/tarot-online.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.marivivian.com/tarot-en-montevideo.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.marivivian.com/tarot-amor.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.marivivian.com/tarot-por-whatsapp.html</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
