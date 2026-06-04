@@ -21,6 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Tracking: insertar aquí GA4 (G-...) o GTM (GTM-...) real si se activa. Ver docs/tracking.md. No usar IDs inventados. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,7 +46,7 @@
         <a class="nav-link nav-priority" href="faq.html">Preguntas</a>
         <a class="nav-link" href="contacto.html">Contacto</a>
       </nav>
-      <a class="cta" href="https://wa.me/59897054961?text=Hola%20Marivivian%2C%20le%C3%AD%20la%20gu%C3%ADa%20de%20tarot%20y%20quiero%20consultar%20disponibilidad%20para%20una%20lectura." target="_blank" rel="noopener">WhatsApp</a>
+      <a data-event="click_whatsapp_general" data-service="general" aria-label="Contactar a Marivivian por WhatsApp" class="cta" href="https://wa.me/59897054961?text=Hola%20Marivivian%2C%20le%C3%AD%20la%20gu%C3%ADa%20de%20tarot%20y%20quiero%20consultar%20disponibilidad%20para%20una%20lectura." target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </header>
 
@@ -196,5 +197,6 @@
       <p><a href="contacto.html">Contacto</a> · <a href="lecturas.html">Lecturas</a> · <a href="guia-tarot.html">Guía de tarot</a> · <a href="tarot-online.html">Tarot online</a> · <a href="tarot-en-montevideo.html">Tarot en Montevideo</a> · <a href="tarot-amor.html">Tarot amor</a> · <a href="tarot-por-whatsapp.html">Tarot por WhatsApp</a></p>
     </div>
   </footer>
+  <script src="js/tracking.js" defer></script>
 </body>
 </html>
