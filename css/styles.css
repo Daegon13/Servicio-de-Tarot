@@ -145,3 +145,32 @@ a:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:
   .cta{padding:9px 12px}
   .main{padding-top:26px}
 }
+
+.section-intro{max-width:780px;color:var(--muted);margin:0 0 18px}
+.service-grid{align-items:stretch}
+.service-card{display:flex;flex-direction:column;gap:8px}
+.service-card h3{font-size:1.35rem;margin:0 0 4px}
+.service-card p{margin:0;color:var(--muted)}
+.service-card strong{color:var(--text)}
+.service-card .price{margin-top:auto;color:var(--text)}
+.section-panel,.content-section{margin-top:34px}
+.split-panel{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  background:linear-gradient(135deg,rgba(21,22,26,.95),rgba(26,27,32,.95));
+  border:1px solid var(--border);border-radius:16px;padding:22px
+}
+.split-panel h2,.split-panel p{margin:0 0 8px}
+.split-panel p{color:var(--muted)}
+.topic-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.topic-list span{
+  background:rgba(200,155,60,.12);border:1px solid rgba(200,155,60,.32);
+  color:var(--text);border-radius:999px;padding:8px 12px
+}
+.limits-block{margin-top:0}
+.note h2{color:var(--text);margin:0 0 10px;font-size:1.4rem}
+
+@media (max-width:720px){
+  .split-panel{align-items:flex-start;flex-direction:column;padding:18px}
+  .split-panel .btn{width:100%;text-align:center}
+  .service-card .btn{width:100%;text-align:center}
+}
