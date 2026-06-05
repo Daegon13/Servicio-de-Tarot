@@ -49,7 +49,7 @@ Documento de control final para publicar el sitio de Marivivian y registrarlo/ve
 - [ ] Verificar que el dominio final sea `https://www.marivivian.com/` o ajustar canonicals/sitemap si cambia.
 - [ ] Confirmar que el hosting fuerza HTTPS.
 - [ ] Confirmar que `index.html`, páginas SEO, `robots.txt` y `sitemap.xml` se publican en la raíz del dominio.
-- [ ] Confirmar que no se publican comentarios internos sensibles ni datos placeholder visibles.
+- [x] Confirmar que no se publican comentarios internos sensibles ni datos placeholder visibles.
 - [ ] Confirmar número de WhatsApp final: `+59897054961`.
 - [ ] Confirmar horario comercial final antes de publicar JSON-LD y Google Business Profile.
 - [ ] Optimizar imágenes pesadas o confirmar optimización automática del hosting/CDN.
