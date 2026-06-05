@@ -16,15 +16,33 @@ body{
   background:var(--bg);
   color:var(--text);
   line-height:1.6;
-  background-image: url('../images/fondo.jpg'); /* Ruta relativa a la imagen */
-  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background:
+    radial-gradient(circle at top left, rgba(200,155,60,.10), transparent 32rem),
+    var(--bg);
 }
 
 a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
-a:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:8px}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:8px}
+
+@media (min-width:900px){
+  body{
+    background-image:
+      linear-gradient(rgba(15,15,17,.82),rgba(15,15,17,.88)),
+      url('../images/fondo.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+  }
+}
+
 
 .container{width:min(1100px,92%);margin-inline:auto}
 .narrow{width:min(800px,92%)}
@@ -106,12 +124,6 @@ a:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:
 
 .site-footer{border-top:1px solid var(--border);padding:22px 0;color:var(--muted)}
 .site-footer .footer-inner{display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center}
-
-@media (max-width:720px){
-  .nav{display:none}
-  .header-inner{gap:10px}
-}
-
 
 .eyebrow{
   color:var(--brand);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;margin:0 0 8px
