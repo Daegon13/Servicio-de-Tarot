@@ -43,7 +43,7 @@ Actualmente no hay un ID real cargado. No insertar IDs inventados.
 ### Opción GA4 directa
 
 1. Reemplazar `G-XXXXXXXXXX` por el Measurement ID real de GA4.
-2. Insertar este bloque en el `<head>` de cada HTML, cerca del comentario de tracking existente:
+2. Insertar este bloque en el `<head>` de cada HTML, después de la hoja de estilos y antes de los scripts `application/ld+json`:
 
 ```html
 <!-- Google Analytics 4: reemplazar por el ID real antes de publicar. -->
@@ -63,7 +63,7 @@ Actualmente no hay un ID real cargado. No insertar IDs inventados.
 3. Insertar el `noscript` oficial de GTM al inicio del `<body>`.
 4. En GTM, crear disparadores de evento personalizado usando los nombres de `data-event` que llegan al `dataLayer`.
 
-Ejemplo de placeholder seguro para el `<head>`:
+Ejemplo de bloque para el `<head>` antes de reemplazar el ID por el Container ID real:
 
 ```html
 <!-- Google Tag Manager: reemplazar por el ID real antes de publicar. -->
