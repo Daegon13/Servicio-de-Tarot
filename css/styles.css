@@ -51,18 +51,6 @@ a:focus-visible,summary:focus-visible{
   border-radius:8px;
 }
 
-@media (min-width:900px){
-  body{
-    background-image:
-      linear-gradient(rgba(19,18,23,.76),rgba(19,18,23,.88)),
-      url('../images/fondo.jpg');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-  }
-}
-
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
@@ -126,6 +114,7 @@ a:focus-visible,summary:focus-visible{
 
 .main{padding:40px 0 80px}
 .hero{position:relative;padding:46px 0 18px}
+.hero > *{position:relative;z-index:2}
 .hero::after{
   content:'';
   position:absolute;
@@ -141,6 +130,68 @@ a:focus-visible,summary:focus-visible{
 }
 .hero h1{max-width:900px;font-size:clamp(30px,5vw,48px);line-height:1.12;margin:0 0 12px;letter-spacing:-.02em}
 .hero p{color:var(--color-muted);margin:0 0 22px}
+
+/*
+ * The source artwork remains a JPEG fallback until `npm run optimize:images`
+ * is run and the generated WebP files are intentionally added to deployment.
+ * Keeping the large source behind this desktop query prevents a 2.4 MB mobile download.
+ */
+@media (max-width:899px){
+  .hero.tarot-bg{
+    width:min(100% - 28px,1100px);
+    padding:38px 24px 28px;
+    overflow:hidden;
+    border:1px solid rgba(196,181,253,.18);
+    border-radius:19px;
+    background:
+      radial-gradient(circle at 88% 18%,rgba(196,181,253,.13),transparent 9rem),
+      linear-gradient(145deg,rgba(47,41,59,.94),rgba(30,27,36,.98));
+    box-shadow:0 16px 36px rgba(6,5,9,.18);
+  }
+}
+
+@media (min-width:900px){
+  .tarot-bg{
+    isolation:isolate;
+    overflow:hidden;
+  }
+  .hero.tarot-bg{
+    min-height:390px;
+    display:flex;
+    align-items:center;
+    padding:64px 48px;
+    border:1px solid rgba(196,181,253,.26);
+    border-radius:24px;
+    background:#211d2a;
+    box-shadow:0 22px 60px rgba(6,5,9,.3);
+  }
+  .hero.tarot-bg::before,
+  .cta-band.tarot-bg::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    z-index:0;
+    background-repeat:no-repeat;
+    pointer-events:none;
+  }
+  .hero.tarot-bg::before{
+    background-image:
+      linear-gradient(90deg,rgba(20,18,25,.97) 0%,rgba(25,21,32,.9) 48%,rgba(31,24,43,.58) 100%),
+      url('../images/marivivian-tarot-fondo.jpg');
+    background-position:center,center;
+    background-size:cover;
+  }
+  .hero.tarot-bg .hero-text{max-width:690px}
+  .hero.tarot-bg p{color:#ded9e5}
+  .cta-band.tarot-bg::before{
+    background-image:
+      linear-gradient(90deg,rgba(32,27,42,.92),rgba(55,42,76,.83),rgba(29,25,38,.93)),
+      url('../images/marivivian-tarot-fondo.jpg');
+    background-position:center,center 58%;
+    background-size:cover;
+    opacity:.84;
+  }
+}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
 .btn-ghost{
   background:rgba(250,249,252,.05);
@@ -382,6 +433,7 @@ a.btn[data-event^="click_whatsapp"]:focus-visible{
   .cta{min-height:42px;padding:9px 13px}
   .main{padding:20px 0 56px}
   .hero{padding:34px 0 20px}
+  .hero.tarot-bg{padding:32px 18px 24px}
   .hero::after{top:10px;right:8px;width:38px;height:38px;box-shadow:-10px 4px 0 -2px #19171e,0 0 22px rgba(139,92,246,.18)}
   .hero h1{padding-right:24px;font-size:clamp(29px,9vw,39px)}
   .hero p{font-size:1.02rem}

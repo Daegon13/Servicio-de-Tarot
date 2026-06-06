@@ -6,14 +6,14 @@ Documento de control final para publicar el sitio de Marivivian y registrarlo/ve
 
 ### Performance
 - [x] Confirmar peso general de HTML, CSS y JS: el sitio mantiene páginas HTML livianas, CSS único y `js/tracking.js` cargado con `defer`.
-- [x] Revisar imágenes pesadas: `images/fondo.jpg` pesa aproximadamente 2.3 MB y `images/cover.png` aproximadamente 2.1 MB.
-- [x] Evitar cargar la imagen de fondo en mobile: el fondo visual pesado queda limitado por CSS a viewport de escritorio (`min-width: 900px`).
+- [x] Revisar imágenes pesadas: `images/marivivian-tarot-fondo.jpg` pesa aproximadamente 2.3 MB y `images/cover.png` aproximadamente 2.1 MB.
+- [x] Evitar cargar la imagen de fondo en mobile: la fuente visual pesada queda limitada por CSS a los héroes y CTA de escritorio (`min-width: 900px`); mobile usa gradientes livianos.
 - [x] Confirmar que no hay imágenes `<img>` visibles sin `loading="lazy"`, dimensiones o `alt`: actualmente no hay etiquetas `<img>` en las páginas.
 - [x] Confirmar que la imagen `cover.png` se usa como recurso social/Open Graph y no como imagen visible de página.
 - [x] Confirmar uso de `font-display=swap` en Google Fonts.
 - [x] Confirmar preconnect a Google Fonts y `fonts.gstatic.com`.
 - [x] Revisar CSS duplicado o innecesario: se eliminó una regla mobile redundante para navegación.
-- [ ] Optimizar o reemplazar `images/fondo.jpg` y `images/cover.png` por versiones comprimidas/WebP antes de producción si el hosting no las optimiza automáticamente.
+- [ ] Ejecutar `npm run optimize:images`, evaluar los WebP generados y agregarlos al despliegue antes de producción; optimizar también `images/cover.png` si el hosting no lo hace automáticamente.
 
 ### Accesibilidad
 - [x] Confirmar un solo `<h1>` por página.
@@ -64,7 +64,7 @@ Documento de control final para publicar el sitio de Marivivian y registrarlo/ve
 - [ ] Confirmar que HTTP redirige a HTTPS.
 - [ ] Confirmar que versión sin `www` redirige a la versión canónica, si esa será la versión oficial.
 - [ ] Confirmar que CSS y JS cargan con código 200.
-- [ ] Confirmar que `images/cover.png` y `images/fondo.jpg` cargan con código 200.
+- [ ] Confirmar que `images/cover.png` y `images/marivivian-tarot-fondo.jpg` cargan con código 200.
 - [ ] Ejecutar Lighthouse/PageSpeed en mobile y desktop.
 - [ ] Revisar consola del navegador sin errores JavaScript.
 - [ ] Confirmar que eventos de WhatsApp se registran solo si se activó GA4/GTM real.

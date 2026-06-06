@@ -1,0 +1,11 @@
+{
+  "name": "marivivian-servicios-de-tarot",
+  "private": true,
+  "description": "Tooling local para optimizar los recursos visuales del sitio estático de Marivivian.",
+  "scripts": {
+    "optimize:images": "node scripts/optimize-images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "0.34.4"
+  }
+}
