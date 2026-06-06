@@ -13,6 +13,9 @@
   --color-border:#45404f;
   --color-button:#7c4dea;
   --color-button-text:#ffffff;
+  --color-whatsapp-bg:#ffffff;
+  --color-whatsapp-hover:#eee9ff;
+  --color-whatsapp-text:#321d59;
   --color-focus:#d8ccff;
 
   /* Aliases retained for the existing component API. */
@@ -148,6 +151,33 @@ a:focus-visible,summary:focus-visible{
 .btn-ghost::before{color:var(--color-accent-soft)}
 .btn-ghost:hover{background:rgba(139,92,246,.16);border-color:#ddd3ff;box-shadow:none}
 .btn.small{min-height:42px;padding:10px 14px;font-size:.95rem}
+
+/* WhatsApp actions use a high-contrast white treatment without changing their links or tracking. */
+a.cta[data-event^="click_whatsapp"],
+a.btn[data-event^="click_whatsapp"]{
+  background:var(--color-whatsapp-bg);
+  border-color:rgba(255,255,255,.9);
+  color:var(--color-whatsapp-text);
+  box-shadow:0 9px 24px rgba(6,5,9,.2),inset 0 -1px rgba(50,29,89,.08);
+}
+a.cta[data-event^="click_whatsapp"]:hover,
+a.btn[data-event^="click_whatsapp"]:hover{
+  background:var(--color-whatsapp-hover);
+  border-color:var(--color-whatsapp-bg);
+  color:#24123f;
+  box-shadow:0 11px 28px rgba(6,5,9,.26),inset 0 -1px rgba(50,29,89,.1);
+}
+a.cta[data-event^="click_whatsapp"]:active,
+a.btn[data-event^="click_whatsapp"]:active{
+  background:#e4dcff;
+  color:#1d0f33;
+  box-shadow:0 4px 14px rgba(6,5,9,.2);
+}
+a.cta[data-event^="click_whatsapp"]:focus-visible,
+a.btn[data-event^="click_whatsapp"]:focus-visible{
+  outline-color:#ffffff;
+  box-shadow:0 0 0 4px rgba(139,92,246,.65),0 9px 24px rgba(6,5,9,.2);
+}
 
 .trust-badges{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 0;padding:0;list-style:none;color:var(--color-muted)}
 .trust-badges li{
