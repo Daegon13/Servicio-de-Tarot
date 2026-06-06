@@ -21,7 +21,7 @@ El sitio prioriza:
 - CSS en `css/styles.css`.
 - JavaScript vanilla en `js/tracking.js`.
 - Imágenes locales en `images/`.
-- Sin framework, sin bundler y sin dependencias npm.
+- Sin framework ni bundler; `sharp` se usa únicamente como herramienta local de optimización de imágenes.
 
 ## Estructura de archivos
 
@@ -43,8 +43,11 @@ El sitio prioriza:
 ├── js/
 │   └── tracking.js               # Captura segura de eventos de conversión
 ├── images/
-│   ├── fondo.jpg                 # Imagen visual principal
-│   └── cover.png                 # Imagen para Open Graph/Twitter
+│   ├── marivivian-tarot-fondo.jpg # Fuente visual principal
+│   └── cover.png                  # Imagen para Open Graph/Twitter
+├── scripts/
+│   └── optimize-images.mjs        # Genera derivados WebP optimizados
+├── package.json                   # Tooling local (Sharp)
 ├── robots.txt                    # Reglas de rastreo
 ├── sitemap.xml                   # URLs públicas del sitio
 └── docs/
@@ -72,7 +75,14 @@ Luego abrir:
 http://localhost:8000/
 ```
 
-No hay paso de instalación ni build.
+No hay un build obligatorio para servir el sitio. Para instalar el tooling y generar versiones WebP optimizadas de la imagen ambiental:
+
+```bash
+npm install
+npm run optimize:images
+```
+
+El script conserva el JPG original, genera una versión WebP general y otra mobile de hasta 840 px. Solo crea la variante desktop de 1600 px cuando la fuente alcanza esa resolución; nunca amplía artificialmente la imagen. También informa por consola el tamaño de cada archivo generado.
 
 ## Cómo desplegar
 
@@ -104,7 +114,7 @@ No se deben inventar datos ni publicar placeholders. Antes de producción o dura
 - Enlace real para pedir reseñas de Google Business Profile.
 - Confirmación operativa de horarios publicados, precios o rangos de precios si cambian.
 - Testimonios reales con autorización explícita antes de agregarlos a `testimonios.html`.
-- Imágenes finales optimizadas si el hosting no comprime automáticamente `images/fondo.jpg` y `images/cover.png`.
+- Imágenes finales optimizadas si el hosting no comprime automáticamente `images/marivivian-tarot-fondo.jpg` y `images/cover.png`.
 
 ## SEO implementado
 
