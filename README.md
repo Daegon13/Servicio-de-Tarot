@@ -89,10 +89,10 @@ Flujo sugerido:
    - `images/`.
    - `robots.txt`.
    - `sitemap.xml`.
-4. Configurar el dominio final `https://www.marivivian.com/`.
+4. Configurar el dominio final `https://www.mariviviantarot.com/`.
 5. Verificar que todas las URLs de `sitemap.xml` respondan en producción.
 6. Dar de alta/verificar el dominio en Google Search Console.
-7. Enviar `https://www.marivivian.com/sitemap.xml` en Search Console.
+7. Enviar `https://www.mariviviantarot.com/sitemap.xml` en Search Console.
 8. Activar GA4 o GTM solo cuando exista un ID real confirmado.
 
 ## Variables y datos reales pendientes

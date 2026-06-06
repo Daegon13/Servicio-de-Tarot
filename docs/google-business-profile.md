@@ -12,7 +12,7 @@ Documento de trabajo para crear o mejorar el Google Business Profile de Marivivi
 | Zona de atención | Montevideo y Uruguay. También puede atender a personas fuera de Uruguay si la modalidad online lo permite, sin crear direcciones físicas no verificadas. | Confirmar si se quiere comunicar alcance internacional. |
 | Modalidad | Consultas online por llamada; coordinación por WhatsApp; videollamada a consultar. | Confirmado por la web. |
 | Horarios | Todos los días, de 12:00 a 22:00. | Confirmado por la web; validar disponibilidad operativa antes de publicar. |
-| Web | `https://www.marivivian.com/` | Confirmado por la web. |
+| Web | `https://www.mariviviantarot.com/` | Confirmado por la web. |
 | Teléfono / WhatsApp | `+598 97 054 961` | Confirmado por la web. |
 | Email | No publicar email hasta contar con una casilla real confirmada. | Pendiente. |
 | Dirección física | No agregar dirección física si no existe una dirección real apta para verificación y atención. | Pendiente / no inventar. |
@@ -130,7 +130,7 @@ Antes de publicar o actualizar el perfil:
 - [ ] Confirmar si el perfil se configurará como negocio de área de servicio, sin dirección visible.
 - [ ] No cargar dirección física si no corresponde.
 - [ ] Confirmar teléfono `+598 97 054 961`.
-- [ ] Confirmar URL `https://www.marivivian.com/`.
+- [ ] Confirmar URL `https://www.mariviviantarot.com/`.
 - [ ] Confirmar si existe email real para publicar.
 - [ ] Cargar horario de 12:00 a 22:00 solo si se puede sostener operativamente.
 - [ ] Agregar servicios con nombres claros y descripciones sin promesas.
