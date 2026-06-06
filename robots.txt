@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.marivivian.com/sitemap.xml
+Sitemap: https://www.mariviviantarot.com/sitemap.xml

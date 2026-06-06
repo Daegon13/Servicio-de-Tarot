@@ -46,7 +46,7 @@ Documento de control final para publicar el sitio de Marivivian y registrarlo/ve
 ## Checklist antes de deploy
 
 - [ ] Ejecutar validación HTML o revisar en W3C Validator las páginas principales.
-- [ ] Verificar que el dominio final sea `https://www.marivivian.com/` o ajustar canonicals/sitemap si cambia.
+- [ ] Verificar que el dominio final sea `https://www.mariviviantarot.com/` o ajustar canonicals/sitemap si cambia.
 - [ ] Confirmar que el hosting fuerza HTTPS.
 - [ ] Confirmar que `index.html`, páginas SEO, `robots.txt` y `sitemap.xml` se publican en la raíz del dominio.
 - [x] Confirmar que no se publican comentarios internos sensibles ni datos placeholder visibles.
@@ -59,7 +59,7 @@ Documento de control final para publicar el sitio de Marivivian y registrarlo/ve
 
 ## Checklist después de deploy
 
-- [ ] Abrir `https://www.marivivian.com/` y confirmar carga correcta sin errores visuales.
+- [ ] Abrir `https://www.mariviviantarot.com/` y confirmar carga correcta sin errores visuales.
 - [ ] Abrir cada URL del sitemap y confirmar código 200.
 - [ ] Confirmar que HTTP redirige a HTTPS.
 - [ ] Confirmar que versión sin `www` redirige a la versión canónica, si esa será la versión oficial.
@@ -71,38 +71,38 @@ Documento de control final para publicar el sitio de Marivivian y registrarlo/ve
 
 ## Verificación en Google Search Console
 
-- [ ] Crear propiedad de dominio o prefijo URL para `https://www.marivivian.com/`.
+- [ ] Crear propiedad de dominio o prefijo URL para `https://www.mariviviantarot.com/`.
 - [ ] Completar verificación DNS o método provisto por el hosting.
-- [ ] Enviar `https://www.marivivian.com/sitemap.xml` en la sección **Sitemaps**.
+- [ ] Enviar `https://www.mariviviantarot.com/sitemap.xml` en la sección **Sitemaps**.
 - [ ] Usar **Inspección de URL** para la home y páginas SEO principales.
 - [ ] Solicitar indexación de la home después de verificar que responde 200 y canonicaliza correctamente.
 - [ ] Revisar reportes de indexación durante los días posteriores al deploy.
 
 ## Prueba de sitemap
 
-- [ ] Abrir `https://www.marivivian.com/sitemap.xml` en navegador.
+- [ ] Abrir `https://www.mariviviantarot.com/sitemap.xml` en navegador.
 - [ ] Confirmar que el XML es válido y no muestra HTML de error.
 - [ ] Confirmar que contiene estas URLs:
-  - `https://www.marivivian.com/`
-  - `https://www.marivivian.com/lecturas.html`
-  - `https://www.marivivian.com/como-funciona.html`
-  - `https://www.marivivian.com/testimonios.html`
-  - `https://www.marivivian.com/faq.html`
-  - `https://www.marivivian.com/guia-tarot.html`
-  - `https://www.marivivian.com/contacto.html`
-  - `https://www.marivivian.com/tarot-online.html`
-  - `https://www.marivivian.com/tarot-en-montevideo.html`
-  - `https://www.marivivian.com/tarot-amor.html`
-  - `https://www.marivivian.com/tarot-por-whatsapp.html`
+  - `https://www.mariviviantarot.com/`
+  - `https://www.mariviviantarot.com/lecturas.html`
+  - `https://www.mariviviantarot.com/como-funciona.html`
+  - `https://www.mariviviantarot.com/testimonios.html`
+  - `https://www.mariviviantarot.com/faq.html`
+  - `https://www.mariviviantarot.com/guia-tarot.html`
+  - `https://www.mariviviantarot.com/contacto.html`
+  - `https://www.mariviviantarot.com/tarot-online.html`
+  - `https://www.mariviviantarot.com/tarot-en-montevideo.html`
+  - `https://www.mariviviantarot.com/tarot-amor.html`
+  - `https://www.mariviviantarot.com/tarot-por-whatsapp.html`
 - [ ] Confirmar que Search Console lo procesa sin errores.
 
 ## Prueba de robots
 
-- [ ] Abrir `https://www.marivivian.com/robots.txt`.
+- [ ] Abrir `https://www.mariviviantarot.com/robots.txt`.
 - [ ] Confirmar contenido esperado:
   - `User-agent: *`
   - `Allow: /`
-  - `Sitemap: https://www.marivivian.com/sitemap.xml`
+  - `Sitemap: https://www.mariviviantarot.com/sitemap.xml`
 - [ ] Confirmar que no hay reglas `Disallow` inesperadas.
 - [ ] Probar una URL principal con el validador/inspector de Search Console.
 
