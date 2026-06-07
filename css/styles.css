@@ -138,15 +138,36 @@ a:focus-visible,summary:focus-visible{
  */
 @media (max-width:899px){
   .hero.tarot-bg{
+    isolation:isolate;
     width:min(100% - 28px,1100px);
     padding:38px 24px 28px;
     overflow:hidden;
-    border:1px solid rgba(196,181,253,.18);
-    border-radius:19px;
+    border:1px solid rgba(216,204,255,.24);
+    border-radius:20px;
     background:
-      radial-gradient(circle at 88% 18%,rgba(196,181,253,.13),transparent 9rem),
-      linear-gradient(145deg,rgba(47,41,59,.94),rgba(30,27,36,.98));
-    box-shadow:0 16px 36px rgba(6,5,9,.18);
+      radial-gradient(circle at 88% 12%,rgba(196,181,253,.22),transparent 9rem),
+      radial-gradient(ellipse at 12% 105%,rgba(109,62,232,.28),transparent 15rem),
+      linear-gradient(145deg,#3a2f4c 0%,#282234 44%,#1b1823 100%);
+    box-shadow:
+      0 22px 48px rgba(6,5,9,.32),
+      inset 0 1px rgba(255,255,255,.08),
+      inset 0 -40px 80px rgba(9,7,14,.2);
+  }
+  .hero.tarot-bg::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background-image:
+      radial-gradient(circle,rgba(255,255,255,.88) 0 1px,transparent 1.5px),
+      radial-gradient(circle,rgba(216,204,255,.62) 0 1px,transparent 1.4px),
+      radial-gradient(circle,rgba(196,181,253,.42) 0 1.4px,transparent 1.9px);
+    background-position:7px 11px,19px 27px,3px 6px;
+    background-size:43px 47px,67px 71px,109px 97px;
+    opacity:.42;
+    -webkit-mask-image:linear-gradient(115deg,rgba(0,0,0,.18),#000 58%,rgba(0,0,0,.78));
+    mask-image:linear-gradient(115deg,rgba(0,0,0,.18),#000 58%,rgba(0,0,0,.78));
+    pointer-events:none;
   }
 }
 
@@ -433,14 +454,32 @@ a.btn[data-event^="click_whatsapp"]:focus-visible{
   .cta{min-height:42px;padding:9px 13px}
   .main{padding:20px 0 56px}
   .hero{padding:34px 0 20px}
-  .hero.tarot-bg{padding:32px 18px 24px}
-  .hero::after{top:10px;right:8px;width:38px;height:38px;box-shadow:-10px 4px 0 -2px #19171e,0 0 22px rgba(139,92,246,.18)}
-  .hero h1{padding-right:24px;font-size:clamp(29px,9vw,39px)}
-  .hero p{font-size:1.02rem}
-  .hero-cta{gap:10px}
-  .hero-cta .btn{width:100%;text-align:center}
-  .trust-badges{gap:8px}
-  .trust-badges li{width:100%;border-radius:11px;padding:9px 11px;background:rgba(47,43,57,.78)}
+  .hero.tarot-bg{padding:34px 18px 24px}
+  .hero::after{
+    top:12px;
+    right:12px;
+    width:38px;
+    height:38px;
+    z-index:1;
+    border-color:rgba(228,220,255,.52);
+    box-shadow:-10px 4px 0 -2px #282134,0 0 26px rgba(196,181,253,.24);
+    opacity:.72;
+  }
+  .hero h1{padding-right:18px;font-size:clamp(29px,9vw,39px);text-wrap:balance;text-shadow:0 2px 18px rgba(7,5,12,.38)}
+  .hero p{max-width:62ch;font-size:1.02rem;color:#e3deea}
+  .hero-cta{gap:10px;margin-top:2px}
+  .hero-cta .btn{width:100%;min-height:48px;text-align:center}
+  .hero-cta .btn-ghost{background:rgba(25,20,34,.48);border-color:rgba(228,220,255,.72);box-shadow:inset 0 1px rgba(255,255,255,.06)}
+  .trust-badges{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .trust-badges li{
+    width:100%;
+    min-height:42px;
+    border-radius:12px;
+    padding:9px 11px;
+    background:linear-gradient(135deg,rgba(68,57,85,.82),rgba(35,30,45,.78));
+    border-color:rgba(216,204,255,.24);
+    box-shadow:inset 0 1px rgba(255,255,255,.04);
+  }
 
   /* Mobile sections become distinct surfaces instead of one continuous black field. */
   .main > section.container:not(.hero),.main > section.narrow:not(.hero){
@@ -469,6 +508,9 @@ a.btn[data-event^="click_whatsapp"]:focus-visible{
 }
 
 @media (max-width:420px){
+  .hero.tarot-bg{padding-inline:16px}
+  .hero h1{padding-right:12px}
+  .trust-badges{grid-template-columns:1fr}
   .brand{font-size:.96rem}
   .cta{font-size:.92rem}
   .btn{width:100%;padding-inline:14px;text-align:center}
