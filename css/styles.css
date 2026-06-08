@@ -131,18 +131,20 @@ a:focus-visible,summary:focus-visible{
 .hero h1{max-width:900px;font-size:clamp(30px,5vw,48px);line-height:1.12;margin:0 0 12px;letter-spacing:-.02em}
 .hero p{color:var(--color-muted);margin:0 0 22px}
 
-/* Mobile uses the existing lightweight WebP as a dedicated image area instead of
- * treating the artwork as a dark texture behind the copy. */
+/* On smaller screens the existing artwork becomes a quiet atmospheric layer,
+ * keeping the message and actions visible from the start of the hero. */
 @media (max-width:899px){
   .hero.tarot-bg{
     isolation:isolate;
     width:min(100% - 28px,1100px);
     min-height:0;
-    padding:0 14px 14px;
+    padding:clamp(18px,4vw,28px);
     overflow:hidden;
     border:1px solid rgba(216,204,255,.24);
     border-radius:20px;
-    background:linear-gradient(180deg,#292131 0%,#211b29 48%,#17141d 100%);
+    background:
+      radial-gradient(circle at 82% 10%,rgba(139,92,246,.22),transparent 15rem),
+      linear-gradient(155deg,#292232 0%,#1e1926 54%,#15131a 100%);
     box-shadow:
       0 22px 48px rgba(6,5,9,.32),
       inset 0 1px rgba(255,255,255,.08);
@@ -150,27 +152,28 @@ a:focus-visible,summary:focus-visible{
   .hero.tarot-bg::before{
     content:'';
     position:absolute;
-    inset:0 0 auto;
-    height:clamp(340px,62vw,560px);
+    inset:0;
     z-index:0;
     background-image:
-      linear-gradient(180deg,rgba(16,11,22,.02) 0%,rgba(18,13,24,.04) 58%,rgba(23,18,30,.8) 91%,#211b29 100%),
+      linear-gradient(105deg,rgba(15,11,20,.82) 0%,rgba(25,18,34,.7) 52%,rgba(18,13,24,.78) 100%),
+      linear-gradient(180deg,rgba(109,62,232,.12),rgba(8,6,11,.58)),
       url('../images/marivivian-tarot-fondo.webp');
-    background-position:center,center 46%;
+    background-position:center,center,center 45%;
     background-repeat:no-repeat;
     background-size:cover;
-    filter:saturate(1.04) contrast(1.02);
+    opacity:.86;
+    filter:saturate(.9) contrast(.94);
     pointer-events:none;
   }
   .hero.tarot-bg .hero-text{
-    margin-top:clamp(310px,57vw,520px);
-    padding:24px clamp(18px,4vw,30px) 22px;
+    max-width:720px;
+    padding:clamp(20px,4vw,30px);
     border:1px solid rgba(228,220,255,.22);
     border-radius:17px;
-    background:linear-gradient(145deg,rgba(35,28,44,.94),rgba(24,20,31,.88));
-    box-shadow:0 18px 42px rgba(7,5,11,.32),inset 0 1px rgba(255,255,255,.08);
-    -webkit-backdrop-filter:blur(10px) saturate(1.08);
-    backdrop-filter:blur(10px) saturate(1.08);
+    background:linear-gradient(145deg,rgba(33,26,43,.82),rgba(20,17,27,.76));
+    box-shadow:0 18px 42px rgba(7,5,11,.28),inset 0 1px rgba(255,255,255,.08);
+    -webkit-backdrop-filter:blur(7px) saturate(1.08);
+    backdrop-filter:blur(7px) saturate(1.08);
   }
 }
 
@@ -457,9 +460,9 @@ a.btn[data-event^="click_whatsapp"]:focus-visible{
   .cta{min-height:42px;padding:9px 13px}
   .main{padding:20px 0 56px}
   .hero{padding:34px 0 20px}
-  .hero.tarot-bg{padding:0 10px 10px}
-  .hero.tarot-bg::before{height:clamp(350px,112vw,560px);background-position:center,center 45%}
-  .hero.tarot-bg .hero-text{margin-top:clamp(322px,104vw,520px);padding:22px 17px 20px}
+  .hero.tarot-bg{padding:14px}
+  .hero.tarot-bg::before{background-position:center,center,58% center}
+  .hero.tarot-bg .hero-text{padding:22px 17px 20px}
   .hero::after{
     top:12px;
     right:12px;
@@ -513,7 +516,7 @@ a.btn[data-event^="click_whatsapp"]:focus-visible{
 }
 
 @media (max-width:420px){
-  .hero.tarot-bg{padding-inline:8px}
+  .hero.tarot-bg{padding:10px}
   .hero.tarot-bg .hero-text{padding-inline:15px}
   .hero h1{padding-right:12px}
   .trust-badges{grid-template-columns:1fr}
