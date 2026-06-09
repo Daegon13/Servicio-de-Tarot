@@ -509,6 +509,46 @@ a.btn[data-event^="click_whatsapp"]:focus-visible{
   }
   .main > .cta-band{width:100%;border-radius:0;padding:32px 14px;margin-top:30px}
   .main > .cta-band .container{width:100%}
+
+  /* Carry the desktop tarot atmosphere into the final CTA without competing with its copy. */
+  .main > .cta-band.tarot-bg{
+    isolation:isolate;
+    min-height:250px;
+    display:flex;
+    align-items:center;
+    padding-block:40px;
+    background:#211d2a;
+  }
+  .main > .cta-band.tarot-bg::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    z-index:0;
+    background-image:
+      linear-gradient(180deg,rgba(22,15,30,.5) 0%,rgba(45,29,61,.42) 48%,rgba(15,12,20,.68) 100%),
+      linear-gradient(90deg,rgba(25,18,34,.54),rgba(67,42,91,.28),rgba(20,16,27,.58)),
+      url('../images/marivivian-tarot-fondo.webp');
+    background-position:center,center,center 58%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    filter:saturate(.9) contrast(1.03) brightness(.82);
+    pointer-events:none;
+  }
+  .main > .cta-band.tarot-bg .container{
+    max-width:680px;
+    padding:22px 18px;
+    border:1px solid rgba(228,220,255,.3);
+    border-radius:17px;
+    background:linear-gradient(145deg,rgba(31,22,42,.76),rgba(18,15,24,.7));
+    box-shadow:0 18px 38px rgba(5,3,8,.28),inset 0 1px rgba(255,255,255,.08);
+    -webkit-backdrop-filter:blur(3px) saturate(1.05);
+    backdrop-filter:blur(3px) saturate(1.05);
+  }
+  .main > .cta-band.tarot-bg h2,
+  .main > .cta-band.tarot-bg p{
+    text-shadow:0 2px 12px rgba(5,3,8,.82);
+  }
+  .main > .cta-band.tarot-bg p{color:#eeeaf2}
   .section-panel,.content-section{margin-top:30px}
   .grid{grid-template-columns:1fr;gap:14px}
   .card{padding:19px;background:linear-gradient(145deg,#332e3e,#292530);border-color:#514a5e}
