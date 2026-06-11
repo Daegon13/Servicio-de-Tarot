@@ -68,9 +68,27 @@ a:focus-visible,summary:focus-visible{
   border-bottom:1px solid rgba(196,181,253,.2);
   box-shadow:0 8px 28px rgba(5,4,8,.2);
 }
-.header-inner{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:14px 0}
-.brand{font-weight:600;letter-spacing:.3px;color:var(--color-text)}
-.brand::before{content:'';display:inline-block;width:9px;height:9px;margin-right:.5rem;background:var(--color-accent-soft);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);vertical-align:.05em}
+.header-inner{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:10px 0}
+.brand-logo{
+  display:inline-flex;
+  flex:0 0 auto;
+  align-items:center;
+  gap:10px;
+  color:var(--color-text);
+  font-weight:600;
+  letter-spacing:.3px;
+  line-height:1;
+}
+.brand-logo:hover{color:var(--color-text);text-decoration:none}
+.brand-logo-img{
+  display:block;
+  width:52px;
+  height:52px;
+  border-radius:12px;
+  object-fit:contain;
+  box-shadow:0 0 0 1px rgba(196,181,253,.18);
+}
+.brand-name{white-space:nowrap}
 .nav{display:flex;gap:14px;flex-wrap:wrap}
 .nav-link{padding:8px 10px;border-radius:10px;color:var(--color-muted)}
 .nav-link.active,.nav-link:hover{background:rgba(139,92,246,.14);color:var(--color-text);text-decoration:none}
@@ -380,6 +398,17 @@ a.btn[data-event^="click_whatsapp"]:focus-visible{
 
 .site-footer{background:rgba(17,16,21,.7);border-top:1px solid var(--color-border);padding:24px 0;color:var(--color-muted)}
 .site-footer .footer-inner{display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center}
+.footer-logo{display:block;margin-bottom:6px;border-radius:14px}
+.footer-logo:hover{text-decoration:none}
+.footer-logo img{
+  display:block;
+  width:72px;
+  height:72px;
+  border-radius:14px;
+  object-fit:contain;
+  opacity:.88;
+}
+.footer-logo:hover img{opacity:1}
 .site-footer p{margin:0}
 
 .eyebrow{color:var(--color-accent-soft);font-weight:600;letter-spacing:.09em;text-transform:uppercase;font-size:.84rem;margin:0 0 8px}
@@ -459,7 +488,8 @@ a.btn[data-event^="click_whatsapp"]:focus-visible{
   .container,.narrow{width:min(100% - 28px,1100px)}
   .site-header{background:rgba(28,25,34,.96)}
   .header-inner{align-items:center;flex-wrap:wrap;padding:11px 0;gap:10px}
-  .brand{padding-top:0}
+  .brand-logo{gap:8px}
+  .brand-logo-img{width:44px;height:44px;border-radius:10px}
   .nav{display:flex;order:3;width:100%;gap:7px;overflow-x:auto;flex-wrap:nowrap;padding:5px 0 2px;scrollbar-width:thin}
   .nav-link{white-space:nowrap;padding:8px 10px;font-size:.92rem;background:rgba(255,255,255,.025)}
   .nav-link:not(.nav-priority):not(.active){display:none}
@@ -567,7 +597,8 @@ a.btn[data-event^="click_whatsapp"]:focus-visible{
   .hero.tarot-bg .hero-text{padding-inline:15px}
   .hero h1{padding-right:12px}
   .trust-badges{grid-template-columns:1fr}
-  .brand{font-size:.96rem}
+  .brand-name{font-size:.96rem}
+  .brand-logo-img{width:40px;height:40px}
   .cta{font-size:.92rem}
   .btn{width:100%;padding-inline:14px;text-align:center}
   .card .btn{margin-top:2px}
