@@ -73,13 +73,8 @@ a:focus-visible,summary:focus-visible{
   display:inline-flex;
   flex:0 0 auto;
   align-items:center;
-  gap:10px;
-  color:var(--color-text);
-  font-weight:600;
-  letter-spacing:.3px;
-  line-height:1;
 }
-.brand-logo:hover{color:var(--color-text);text-decoration:none}
+.brand-logo:hover{text-decoration:none}
 .brand-logo-img{
   display:block;
   width:52px;
@@ -88,7 +83,6 @@ a:focus-visible,summary:focus-visible{
   object-fit:contain;
   box-shadow:0 0 0 1px rgba(196,181,253,.18);
 }
-.brand-name{white-space:nowrap}
 .nav{display:flex;gap:14px;flex-wrap:wrap}
 .nav-link{padding:8px 10px;border-radius:10px;color:var(--color-muted)}
 .nav-link.active,.nav-link:hover{background:rgba(139,92,246,.14);color:var(--color-text);text-decoration:none}
@@ -488,7 +482,6 @@ a.btn[data-event^="click_whatsapp"]:focus-visible{
   .container,.narrow{width:min(100% - 28px,1100px)}
   .site-header{background:rgba(28,25,34,.96)}
   .header-inner{align-items:center;flex-wrap:wrap;padding:11px 0;gap:10px}
-  .brand-logo{gap:8px}
   .brand-logo-img{width:44px;height:44px;border-radius:10px}
   .nav{display:flex;order:3;width:100%;gap:7px;overflow-x:auto;flex-wrap:nowrap;padding:5px 0 2px;scrollbar-width:thin}
   .nav-link{white-space:nowrap;padding:8px 10px;font-size:.92rem;background:rgba(255,255,255,.025)}
@@ -597,7 +590,6 @@ a.btn[data-event^="click_whatsapp"]:focus-visible{
   .hero.tarot-bg .hero-text{padding-inline:15px}
   .hero h1{padding-right:12px}
   .trust-badges{grid-template-columns:1fr}
-  .brand-name{font-size:.96rem}
   .brand-logo-img{width:40px;height:40px}
   .cta{font-size:.92rem}
   .btn{width:100%;padding-inline:14px;text-align:center}
